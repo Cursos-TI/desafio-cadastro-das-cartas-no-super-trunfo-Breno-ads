@@ -2,11 +2,11 @@
 
 
 
-int main() {
+int main(){
 
 char estado1 [30], estado2 [30], codigodacarta1 [30], codigodacarta2 [30], nomedacidade1 [30], nomedacidade2 [30];
 int populacao1, populacao2, pontosturisticos1, pontosturisticos2;
-float area1, area2, PIB1, PIB2;
+float area1, area2, PIB1, PIB2,D_P1, D_P2, PIBpercapita1, PIBpercapita2;
 
 printf("SUPER TRUNFO\n");
 
@@ -33,6 +33,9 @@ scanf (" %f" , &PIB1);
 printf ("QUANTIDADE DE PONTOS TURISTICOS DA CIDADE: \n");
 scanf ("%d", &pontosturisticos1);
 
+D_P1 = (float) (populacao1 / area1);
+PIBpercapita1 = (PIB1 * 1e9) / (populacao1);
+
 printf ("CARTA 2: \n");
 
 printf ("ESCREVA O ESTADO DA CARTA DE A-H: \n");
@@ -56,6 +59,9 @@ scanf (" %f" , &PIB2);
 printf ("QUANTIDADE DE PONTOS TURISTICOS DA CIDADE: \n");
 scanf ("%d", &pontosturisticos2);
 
+D_P2 = (float) (populacao2 / area2);
+PIBpercapita2 = (PIB2 * 1e9) / (populacao2);
+
 printf ("SUPER TRUNFO \n");
 
 printf ("CARTA 1: \n");
@@ -64,9 +70,12 @@ printf("Estado: %s\n", estado1);
 printf("CODIGO DA CARTA: %s\n", codigodacarta1);
 printf("NOME DA CIDADE: %s\n", nomedacidade1);
 printf("POPULACAO: %.d habitantes\n", populacao1);
-printf("AREA: %.3f km²\n", area1);
-printf("PIB: %.3f\n", PIB1);
+printf("AREA: %.2f km²\n", area1);
+printf("PIB: %.2f BILHOES DE REAIS\n", PIB1);
 printf("PONTOS TURISTICOS: %d\n", pontosturisticos1);
+printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", D_P1);
+printf ("PIB PER CAPITA: %.2f REAIS \n", PIBpercapita1);
+
 
 printf ("CARTA 2: \n");
 
@@ -74,9 +83,11 @@ printf("Estado: %s\n", estado2);
 printf("CODIGO DA CARTA: %s\n", codigodacarta2);
 printf("NOME DA CIDADE: %s\n", nomedacidade2);
 printf("POPULACAO: %.d habitantes\n", populacao2);
-printf("AREA: %.3f km²\n", area2);
-printf("PIB: %.3f\n", PIB2);
+printf("AREA: %.2f km²\n", area2);
+printf("PIB: %.2f BILHÕES DE REAIS\n", PIB2);
 printf("PONTOS TURISTICOS: %d\n", pontosturisticos2);
+printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", D_P2);
+printf ("PIB PER CAPITA: %.2f REAIS \n", PIBpercapita2);
 
-    return 0;
+return 0;
 }
